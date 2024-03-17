@@ -31,6 +31,30 @@ cd demo-dashboard
 cargo add dioxus@0.5.0-alpha.0 --features web
 ```
 
+- Install the dioxus-cli
+  
+https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
+
+```bash
+cargo install dioxus-cli
+```
+
+Using the Dioxus Config file and the Dioxus CLI you can create a `Dioxus.toml` file in the root of your project. This file will contain the configuration for the Dioxus CLI.
+
+```toml
+[application]
+name = "project-name"
+# Currently supported platforms: web, desktop
+default_platform = "web"
+
+[web.app]
+title = "Hello"
+
+[web.watcher]
+
+[web.resource.dev]
+```
+
 ## Running the application
 
 - Run the application on the server
@@ -45,3 +69,4 @@ dx serve
 - Example Projects : https://github.com/DioxusLabs/example-projects/tree/master
 - Rust : https://www.rust-lang.org/
 - Dioxus : https://dioxuslabs.com/
+- Dioxus CLI : https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
