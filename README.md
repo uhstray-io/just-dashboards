@@ -1,14 +1,21 @@
 # demo-dashboard documentation
 
+## Design Architecture
+
+![Initial Design Draft Architecture](./design_reference.png)
+
 ## Dependencies
 
 Install the following dependencies:
 
 - [Rust](https://www.rust-lang.org/tools/install) to run the application on the server 
 - Install the Dioxus tooling
+- Install the dioxus-cli
+  
+https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
 
 ```bash
-cargo install dioxus-cli@0.5.0-alpha.0
+cargo install dioxus-cli
 ```
 
 - Install the `wasm32-unknown-unknown` target for Rust
@@ -28,16 +35,10 @@ cd demo-dashboard
 - Run this command to add the web renderer dependencies to the `Cargo.toml` file
 
 ```bash
-cargo add dioxus@0.5.0-alpha.0 --features web
+cargo add dioxus@0.5.0-alpha.0 --features fullstack
 ```
 
-- Install the dioxus-cli
-  
-https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
 
-```bash
-cargo install dioxus-cli
-```
 
 Using the Dioxus Config file and the Dioxus CLI you can create a `Dioxus.toml` file in the root of your project. This file will contain the configuration for the Dioxus CLI.
 
