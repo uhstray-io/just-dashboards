@@ -35,7 +35,7 @@ cd demo-dashboard
 - Run this command to add the web renderer dependencies to the `Cargo.toml` file
 
 ```bash
-cargo add dioxus@0.5.0-alpha.0 --features fullstack
+cargo add dioxus@0.5.0-alpha.2 --features fullstack
 ```
 
 
@@ -61,7 +61,13 @@ title = "Hello"
 - Run the application on the server
 
 ```bash
-dx serve
+dx serve --platform fullstack
+```
+
+## Useful Commands
+
+```bash
+dx fmt
 ```
 
 

@@ -6,5 +6,11 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = { version = "0.5.0-alpha.0", features = ["fullstack"] }
+dioxus = { version = "0.5.0-alpha.2", features = ["fullstack"] }
 tokio = "1.36.0"
+
+
+[features]
+default = []
+server = ["dioxus/axum"]
+web = ["dioxus/web"]
