@@ -2,6 +2,8 @@
 // import the prelude to get access to the `rsx!` macro and the `Element` type
 use dioxus::prelude::*;
 
+mod dashboard;
+
 fn main() {
     launch(App);
 }
@@ -17,14 +19,13 @@ fn App() -> Element {
         button { onclick: move |_| count -= 1, "Down low!" }
 
         button {
-            onclick: move |_|
-
-            // To call a server function, wrap it in a async block
-            async move {
-                let _ = print_users_counter( count() ).await;
+            onclick: move |_| async move {
+                let _ = print_users_counter(count()).await;
             },
             "Print counter on the server"
         }
+
+        dashboard::Dashboard {}
     }
 }
 
