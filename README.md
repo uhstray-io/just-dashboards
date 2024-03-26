@@ -15,7 +15,7 @@ Install the following dependencies:
 https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
 
 ```bash
-cargo install dioxus-cli
+cargo install dioxus-cli@0.5.0-alpha.2
 ```
 
 - Install the `wasm32-unknown-unknown` target for Rust
@@ -62,6 +62,33 @@ title = "Hello"
 
 ```bash
 dx serve --platform fullstack
+```
+
+## Running the application using a Docker container
+
+- Build the Docker image
+
+```bash
+docker build -t demo-dashboard .
+```
+
+- Run and test the Docker image
+
+```bash
+docker run -p 8080:8080 demo-dashboard
+```
+
+- Uploading the Docker image to the Docker Hub
+
+```bash
+docker tag uhstray/demo-dashboard:latest uhstray/demo-dashboard:latest
+docker push uhstray/demo-dashboard:latest
+```
+
+- Pulling the Docker image from the Docker Hub
+
+```bash
+docker pull uhstray/demo-dashboard:latest
 ```
 
 ## Useful Commands
